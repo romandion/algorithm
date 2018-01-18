@@ -1,0 +1,318 @@
+/*
+    This file is a part of libcds - Concurrent Data Structures library
+    See http://libcds.sourceforge.net/
+
+    (C) Copyright Maxim Khiszinsky [khizmax at gmail dot com] 2006-2012
+    Distributed under the BSD license (see accompanying file license.txt)
+
+    Version 1.2.0
+*/
+
+
+#ifndef __CDS_CONTAINER_RWQUEUE_H
+#define __CDS_CONTAINER_RWQUEUE_H
+
+#include <cds/opt/options.h>
+#include <cds/lock/spinlock.h>
+#include <cds/intrusive/queue_stat.h>
+#include <cds/details/allocator.h>
+#include <cds/details/trivial_assign.h>
+#include <cds/ref.h>
+
+namespace cds { namespace container {
+
+    /// Michael & Scott blocking queue with fine-grained synchronization schema
+    /** @ingroup cds_nonintrusive_queue
+        The queue has two different locks: one for reading and one for writing.
+        Therefore, one writer and one reader can simultaneously access to the queue.
+        The queue does not require any garbage collector.
+
+        <b>Source</b>
+            - [1998] Maged Michael, Michael Scott "Simple, fast, and practical non-blocking
+                and blocking concurrent queue algorithms"
+
+        <b>Template arguments</b>
+        - \p T - type to be stored in the queue
+        - \p Options - options
+
+        \p Options are:
+        - opt::allocator - allocator (like \p std::allocator). Default is \ref CDS_DEFAULT_ALLOCATOR
+        - opt::lock_type - type of lock primitive. Default is cds::lock::Spin.
+        - opt::item_counter - the type of item counting feature. Default is \ref atomicity::empty_item_counter
+        - opt::stat - the type to gather internal statistics.
+            Possible option value are: queue_stat, queue_dummy_stat, user-provided class that supports queue_stat interface.
+            Default is \ref intrusive::queue_dummy_stat.
+            <tt>RWQueue</tt> uses only \p onEnqueue and \p onDequeue counter.
+        - opt::alignment - the alignment for \p lock_type to prevent false sharing. Default is opt::cache_line_alignment
+
+        This queue has no intrusive counterpart.
+    */
+    template <typename T, CDS_DECL_OPTIONS6>
+    class RWQueue
+    {
+        //@cond
+        struct default_options
+        {
+            typedef lock::Spin  lock_type                   ;
+            typedef CDS_DEFAULT_ALLOCATOR   allocator       ;
+            typedef atomicity::empty_item_counter item_counter;
+            typedef intrusive::queue_dummy_stat stat        ;
+            enum { alignment = opt::cache_line_alignment }  ;
+        };
+        //@endcond
+
+    public:
+        //@cond
+        typedef typename opt::make_options<
+            typename cds::opt::find_type_traits< default_options, CDS_OPTIONS6 >::type
+            ,CDS_OPTIONS6
+        >::type   options ;
+        //@endcond
+
+    public:
+        /// Rebind template arguments
+        template <typename T2, CDS_DECL_OTHER_OPTIONS6>
+        struct rebind {
+            typedef RWQueue< T2, CDS_OTHER_OPTIONS6> other   ;   ///< Rebinding result
+        };
+
+    public:
+        typedef T   value_type  ;   ///< type of value stored in the queue
+
+        typedef typename options::lock_type lock_type   ;   ///< Locking primitive used
+
+    protected:
+        //@cond
+        /// Node type
+        struct node_type
+        {
+            node_type * volatile    m_pNext ;   ///< Pointer to the next node in queue
+            value_type              m_value ;   ///< Value stored in the node
+
+            node_type()
+                : m_pNext( null_ptr<node_type *>() )
+            {}
+
+            node_type( const value_type& v )
+                : m_pNext(null_ptr<node_type *>())
+                , m_value(v)
+            {}
+        };
+        //@endcond
+
+    public:
+        typedef typename options::allocator::template rebind<node_type>::other allocator_type   ; ///< Allocator type used for allocate/deallocate the queue nodes
+        typedef typename options::item_counter item_counter ;   ///< Item counting policy used
+        typedef typename options::stat      stat        ;   ///< Internal statistics policy used
+
+    protected:
+        //@cond
+        typedef typename opt::details::alignment_setter< lock_type, options::alignment >::type aligned_lock_type ;
+        typedef lock::Auto<lock_type>   auto_lock   ;
+        typedef cds::details::Allocator< node_type, allocator_type >  node_allocator ;
+
+        item_counter    m_ItemCounter   ;
+        stat            m_Stat          ;
+
+        mutable aligned_lock_type   m_HeadLock  ;
+        node_type * m_pHead ;
+        mutable aligned_lock_type   m_TailLock  ;
+        node_type * m_pTail ;
+        //@endcond
+
+    protected:
+        //@cond
+        node_type * alloc_node()
+        {
+            return node_allocator().New()    ;
+        }
+
+        node_type * alloc_node( const T& data )
+        {
+            return node_allocator().New( data )    ;
+        }
+
+        void free_node( node_type * pNode )
+        {
+            node_allocator().Delete( pNode )    ;
+        }
+
+        bool enqueue_node( node_type * p )
+        {
+            {
+                auto_lock lock( m_TailLock )    ;
+                m_pTail =
+                    m_pTail->m_pNext = p        ;
+            }
+            ++m_ItemCounter     ;
+            m_Stat.onEnqueue()  ;
+            return true ;
+        }
+        //@endcond
+
+    public:
+        /// Makes empty queue
+        RWQueue()
+        {
+            node_type * pNode = alloc_node()    ;
+            m_pHead =
+                m_pTail = pNode    ;
+        }
+
+        /// Destructor clears queue
+        ~RWQueue()
+        {
+            clear()    ;
+            assert( m_pHead == m_pTail );
+            free_node( m_pHead )        ;
+        }
+
+        /// Enqueues \p data. Always return \a true
+        bool enqueue( const value_type& data )
+        {
+            return enqueue_node( alloc_node( data ) )    ;
+        }
+
+        /// Enqueues \p data to queue using copy functor
+        /**
+            \p Func is a functor called to copy value \p data of type \p Type
+            which may be differ from type \p T stored in the queue.
+            The functor's interface is:
+            \code
+            struct myFunctor {
+                void operator()(T& dest, SOURCE const& data)
+                {
+                    // // Code to copy \p data to \p dest
+                    dest = data ;
+                }
+            };
+            \endcode
+            You may use \p boost:ref construction to pass functor \p f by reference.
+
+            <b>Requirements</b> The functor \p Func should not throw any exception.
+        */
+        template <typename Type, typename Func>
+        bool enqueue( const Type& data, Func f  )
+        {
+            node_type * p = alloc_node()    ;
+            unref(f)( p->m_value, data )  ;
+            return enqueue_node( p )    ;
+        }
+
+        /// Dequeues a value using copy functor
+        /**
+            \p Func is a functor called to copy dequeued value to \p dest of type \p Type
+            which may be differ from type \p T stored in the queue.
+            The functor's interface is:
+            \code
+            struct myFunctor {
+                void operator()(Type& dest, T const& data)
+                {
+                    // // Copy \p data to \p dest
+                    dest = data ;
+                }
+            };
+            \endcode
+            You may use \p boost:ref construction to pass functor \p f by reference.
+
+            <b>Requirements</b> The functor \p Func should not throw any exception.
+        */
+        template <typename Type, typename Func>
+        bool dequeue( Type& dest, Func f )
+        {
+            node_type * pNode    ;
+            {
+                auto_lock lock( m_HeadLock )    ;
+                pNode = m_pHead             ;
+                node_type * pNewHead = pNode->m_pNext    ;
+                if ( pNewHead == NULL )
+                    return false            ;
+                unref(f)( dest, pNewHead->m_value ) ;
+                m_pHead = pNewHead          ;
+            }    // unlock here
+            --m_ItemCounter     ;
+            free_node( pNode )    ;
+            m_Stat.onDequeue()  ;
+            return true    ;
+        }
+
+        /** Dequeues a value to \p dest.
+
+            If queue is empty returns \a false, \p dest may be corrupted.
+            If queue is not empty returns \a true, \p dest contains the value dequeued
+        */
+        bool dequeue( value_type& dest )
+        {
+            typedef cds::details::trivial_assign<value_type, value_type> functor ;
+            return dequeue( dest, functor() )   ;
+        }
+
+        /// Synonym for \ref enqueue
+        bool push( const value_type& data )
+        {
+            return enqueue( data );
+        }
+
+        /// Synonym for template version of \ref enqueue function
+        template <typename Type, typename Func>
+        bool push( const Type& data, Func f  )
+        {
+            return enqueue( data, f )   ;
+        }
+
+        /// Synonym for \ref dequeue
+        bool pop( value_type& data )
+        {
+            return dequeue( data );
+        }
+
+        /// Synonym for template version of \ref dequeue function
+        template <typename Type, typename Func>
+        bool pop( Type& dest, Func f )
+        {
+            return dequeue( dest, f )   ;
+        }
+
+        /// Checks if queue is empty
+        bool empty() const
+        {
+            auto_lock lock( m_HeadLock )    ;
+            return m_pHead->m_pNext == NULL    ;
+        }
+
+        /// Clears queue
+        void clear()
+        {
+            auto_lock lockR( m_HeadLock )    ;
+            auto_lock lockW( m_TailLock )    ;
+            while ( m_pHead->m_pNext != NULL ) {
+                node_type * pHead = m_pHead     ;
+                m_pHead = m_pHead->m_pNext      ;
+                free_node( pHead )        ;
+            }
+        }
+
+        /// Returns queue's item count
+        /**
+            The value returned depends on opt::item_counter option. For atomicity::empty_item_counter,
+            this function always returns 0.
+
+            <b>Warning</b>: even if you use real item counter and it returns 0, this fact is not mean that the queue
+            is empty. To check queue emptyness use \ref empty() method.
+        */
+        size_t    size() const
+        {
+            return m_ItemCounter.value()    ;
+        }
+
+        /// Returns reference to internal statistics
+        const stat& statistics() const
+        {
+            return m_Stat   ;
+        }
+
+    };
+
+}}  // namespace cds::container
+
+#endif // #ifndef __CDS_CONTAINER_RWQUEUE_H

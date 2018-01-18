@@ -1,0 +1,447 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="map">
+      <UniqueIdentifier>{0d800ed7-56d7-4569-ab03-788d92b52ad4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="queue">
+      <UniqueIdentifier>{e708159c-5cf4-4558-ad30-008d7b96a15a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stack">
+      <UniqueIdentifier>{c2739e1f-4688-4330-a3e1-890849780440}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="cppunit">
+      <UniqueIdentifier>{db69c63b-6451-4ac7-b84c-82f3f199932c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ordered-list">
+      <UniqueIdentifier>{c068cc9e-bc05-4639-9837-3287ebe6e38a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{19f56d0d-5b61-4bb7-8052-22c219c2f644}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="deque">
+      <UniqueIdentifier>{1bfe0cc6-b01b-4a59-9aa3-dcd3100ba4fc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hp_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hrc_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_nogc_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_ptb_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hp_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hrc_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_nogc_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_ptb_lazy.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_hp.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_hrc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_nogc.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_ptb.cpp">
+      <Filter>map</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_moirqueue_hp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_moirqueue_hrc.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_moirqueue_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue_hp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue_hrc.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_optimisticqueue_hp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_optimisticqueue_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_tsigas_cycle_queue.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_vyukovmpmc_cycle_queue.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_moirqueue_hrc.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_moirqueue_hzp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_moirqueue_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_msqueue_hrc.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_msqueue_hzp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_msqueue_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_optimistic_hzp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_optimistic_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_rwqueue.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_vyukov_mpmc_cyclic.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\queue_test_header.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack_hp.cpp">
+      <Filter>stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack_hrc.cpp">
+      <Filter>stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack_ptb.cpp">
+      <Filter>stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack_hp.cpp">
+      <Filter>stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack_hrc.cpp">
+      <Filter>stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack_ptb.cpp">
+      <Filter>stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\cppunit\test_main.cpp">
+      <Filter>cppunit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\cppunit\thread.cpp">
+      <Filter>cppunit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_hp.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_hrc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_nogc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_ptb.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_hp.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_hrc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_nogc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_ptb.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_hp.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_hrc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_hp.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_hrc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_nogc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_ptb.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_nogc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_ptb.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_hp.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_hrc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_hp.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_hrc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_nogc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_ptb.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_nogc.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_ptb.cpp">
+      <Filter>ordered-list</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\cxx11_atomic_class.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\cxx11_atomic_func.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\allocator_test.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\michael_allocator.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_intrusive_michael_deque_hp.cpp">
+      <Filter>deque</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_intrusive_michael_deque_ptb.cpp">
+      <Filter>deque</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_michael_deque_hp.cpp">
+      <Filter>deque</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_michael_deque_ptb.cpp">
+      <Filter>deque</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_hp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_hrc.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_basketqueue_hrc.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_basketqueue_hzp.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_basketqueue_ptb.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\tests\test-hdr\map\hdr_intrusive_set.h">
+      <Filter>map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\map\hdr_map.h">
+      <Filter>map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\map\hdr_set.h">
+      <Filter>map</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\queue_test_header.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack.h">
+      <Filter>stack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack.h">
+      <Filter>stack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\cppunit_mini.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\cppunit_proxy.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\file_reporter.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\thread.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy.h">
+      <Filter>ordered-list</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael.h">
+      <Filter>ordered-list</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy.h">
+      <Filter>ordered-list</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv.h">
+      <Filter>ordered-list</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael.h">
+      <Filter>ordered-list</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv.h">
+      <Filter>ordered-list</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\misc\cxx11_convert_memory_order.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\misc\michael_allocator.h">
+      <Filter>misc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\test_beans.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\deque\hdr_intrusive_deque.h">
+      <Filter>deque</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\deque\hdr_deque.h">
+      <Filter>deque</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_node.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_singlelink_node.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

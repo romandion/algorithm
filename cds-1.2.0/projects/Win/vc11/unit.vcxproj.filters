@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="cppunit">
+      <UniqueIdentifier>{8aeccab2-bb90-48db-b68a-b34e2791bc3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="queue">
+      <UniqueIdentifier>{eb3562ad-55b0-4745-87cc-9b462e7368cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="lock">
+      <UniqueIdentifier>{3fd82343-2d59-4cc6-932a-324a125a343a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="misc">
+      <UniqueIdentifier>{1d1749fa-7391-41ab-baf3-de56852abce9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="stack">
+      <UniqueIdentifier>{d741976d-cf0b-4bdb-b1d1-3ada469e659d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="alloc">
+      <UniqueIdentifier>{7f9c75e0-4194-46ff-9008-a94c616c0f9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="map2">
+      <UniqueIdentifier>{b72b85d5-c4f9-4475-a84b-53ce8fdbd8b7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\tests\cppunit\cppunit_mini.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\cppunit_proxy.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\file_reporter.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\cppunit\thread.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\queue\queue_type.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\queue\std_queue.h">
+      <Filter>queue</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\lock\nolock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\lock\win32_lock.h">
+      <Filter>lock</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\stack\stack_type.h">
+      <Filter>stack</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\alloc\michael_allocator.h">
+      <Filter>alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\alloc\random_gen.h">
+      <Filter>alloc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\map2\map_types.h">
+      <Filter>map2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\map2\std_hash_map.h">
+      <Filter>map2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\map2\std_hash_map_gcc.h">
+      <Filter>map2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\map2\std_hash_map_vc.h">
+      <Filter>map2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\map2\std_map.h">
+      <Filter>map2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\map2\std_map_gcc.h">
+      <Filter>map2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\map2\std_map_vc.h">
+      <Filter>map2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\michael_alloc.h" />
+    <ClInclude Include="..\..\..\tests\cppunit\test_beans.h">
+      <Filter>cppunit</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\tests\unit\print_deque_stat.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\tests\cppunit\test_main.cpp">
+      <Filter>cppunit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\cppunit\thread.cpp">
+      <Filter>cppunit</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\queue\pop_mt.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\queue\push_mt.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\queue\Queue_bounded_empty_ST.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\queue\random_mt.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\queue\reader_writer_mt.cpp">
+      <Filter>queue</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\lock\spinlock.cpp">
+      <Filter>lock</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\misc\allocator.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\misc\bitop_st.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\misc\thread_init_fini.cpp">
+      <Filter>misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\stack\stack_push_mt.cpp">
+      <Filter>stack</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\alloc\hoard_threadtest.cpp">
+      <Filter>alloc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\alloc\larson.cpp">
+      <Filter>alloc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\alloc\linux_scale.cpp">
+      <Filter>alloc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\alloc\michael_allocator.cpp">
+      <Filter>alloc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\alloc\random.cpp">
+      <Filter>alloc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_find_int.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_find_string.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_insdel_func.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_insdel_int.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_insdel_item_int.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_insdel_item_string.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_insdel_string.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\map2\map_insfind_int.cpp">
+      <Filter>map2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\tests\unit\michael_alloc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\tests\data\dictionary.txt" />
+    <CustomBuild Include="..\..\..\tests\data\test-debug.conf" />
+    <CustomBuild Include="..\..\..\tests\data\test.conf" />
+    <CustomBuild Include="..\..\..\tests\data\test-express.conf" />
+  </ItemGroup>
+</Project>

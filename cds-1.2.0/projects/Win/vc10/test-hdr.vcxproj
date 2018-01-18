@@ -1,0 +1,453 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugVLD|Win32">
+      <Configuration>DebugVLD</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugVLD|x64">
+      <Configuration>DebugVLD</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8EC8927-F96E-41CE-9431-6654AE33BB19}</ProjectGuid>
+    <RootNamespace>testhdr</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\..\..\bin\vc10\x86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\..\..\obj\vc10\x86\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\..\..\bin\vc10\amd64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)..\..\..\obj\vc10\amd64\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\..\..\bin\vc10\x86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\..\..\obj\vc10\x86\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\..\bin\vc10\amd64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)..\..\..\obj\vc10\amd64\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'">$(SolutionDir)..\..\..\bin\vc10\x86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'">$(SolutionDir)..\..\..\obj\vc10\x86\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'">$(SolutionDir)..\..\..\bin\vc10\amd64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'">$(SolutionDir)..\..\..\obj\vc10\amd64\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'">true</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectName)-debug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'">$(ProjectName)-debug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'">$(ProjectName)-debug</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(ProjectName)-debug</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..;$(SolutionDir)..\..\..\tests\test-hdr;$(SolutionDir)..\..\..\tests;$(BOOST_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0500;_SCL_SECURE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>$(BOOST_PATH)/stage32/lib;$(BOOST_PATH)/stage/lib;$(BOOST_PATH)/bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..;$(SolutionDir)..\..\..\tests\test-hdr;$(SolutionDir)..\..\..\tests;$(BOOST_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0500;_SCL_SECURE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>$(BOOST_PATH)/stage64/lib;$(BOOST_PATH)/stage/lib64;$(BOOST_PATH)/bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..;$(SolutionDir)..\..\..\tests\test-hdr;$(SolutionDir)..\..\..\tests;$(BOOST_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_WIN32_WINNT=0x0500;_SCL_SECURE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>$(BOOST_PATH)/stage32/lib;$(BOOST_PATH)/stage/lib;$(BOOST_PATH)/bin;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..;$(SolutionDir)..\..\..\tests\test-hdr;$(SolutionDir)..\..\..\tests;$(BOOST_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_WIN32_WINNT=0x0501;_SCL_SECURE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <EnablePREfast>false</EnablePREfast>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>$(BOOST_PATH)/stage64/lib;$(BOOST_PATH)/stage/lib64;$(BOOST_PATH)/bin;$(OutDir);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+      <Profile>true</Profile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugVLD|Win32'">
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..;$(SolutionDir)..\..\..\tests\test-hdr;$(SolutionDir)..\..\..\tests;$(BOOST_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CDS_USE_VLD;WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0500;_SCL_SECURE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>$(BOOST_PATH)/stage32/lib;$(BOOST_PATH)/stage/lib;$(BOOST_PATH)/bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugVLD|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)..\..\..;$(SolutionDir)..\..\..\tests\test-hdr;$(SolutionDir)..\..\..\tests;$(BOOST_PATH);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>CDS_USE_VLD;WIN32;_DEBUG;_CONSOLE;_WIN32_WINNT=0x0500;_SCL_SECURE=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(TargetPath)</OutputFile>
+      <AdditionalLibraryDirectories>$(BOOST_PATH)/stage64/lib;$(BOOST_PATH)/stage/lib64;$(BOOST_PATH)/bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_intrusive_michael_deque_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_intrusive_michael_deque_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_michael_deque_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\deque\hdr_michael_deque_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hp_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_hrc_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_nogc_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_michael_set_ptb_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hp_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_hrc_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_nogc_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_intrusive_splitlist_set_ptb_lazy.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_lazy_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_map_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_lazy_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_michael_set_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_lazy_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_map_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_lazy_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\map\hdr_splitlist_set_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\allocator_test.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\cxx11_atomic_class.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\cxx11_atomic_func.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\misc\michael_allocator.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_basketqueue_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_basketqueue_hzp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_basketqueue_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_moirqueue_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_moirqueue_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_moirqueue_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_optimisticqueue_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_optimisticqueue_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_tsigas_cycle_queue.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_vyukovmpmc_cycle_queue.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_moirqueue_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_moirqueue_hzp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_moirqueue_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_msqueue_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_msqueue_hzp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_msqueue_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_optimistic_hzp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_optimistic_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_rwqueue.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\hdr_vyukov_mpmc_cyclic.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\queue\queue_test_header.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\cppunit\test_main.cpp" />
+    <ClCompile Include="..\..\..\tests\cppunit\thread.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_hp.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_hrc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv_ptb.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_nogc.cpp" />
+    <ClCompile Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_ptb.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\tests\cppunit\test_beans.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\deque\hdr_deque.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\deque\hdr_intrusive_deque.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\map\hdr_intrusive_set.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\map\hdr_map.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\map\hdr_set.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\misc\cxx11_convert_memory_order.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\misc\michael_allocator.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_basketqueue_node.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_msqueue.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\hdr_intrusive_singlelink_node.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\queue\queue_test_header.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\stack\hdr_intrusive_treiber_stack.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\stack\hdr_treiber_stack.h" />
+    <ClInclude Include="..\..\..\tests\cppunit\cppunit_mini.h" />
+    <ClInclude Include="..\..\..\tests\cppunit\cppunit_proxy.h" />
+    <ClInclude Include="..\..\..\tests\cppunit\file_reporter.h" />
+    <ClInclude Include="..\..\..\tests\cppunit\thread.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_lazy.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_intrusive_michael.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_lazy_kv.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael.h" />
+    <ClInclude Include="..\..\..\tests\test-hdr\ordered_list\hdr_michael_kv.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="cds.vcxproj">
+      <Project>{408fe9bc-44f0-4e6a-89fa-d6f952584239}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
